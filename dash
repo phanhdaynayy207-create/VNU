@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển - VNU Health</title>
+    <style>
+        :root {
+            --primary-pastel: #ffc0cb; 
+            --secondary-dark: #8b0000; 
+            --text-color: #333;
+            --bg-light: #f4f4f9;
+            --card-bg: white;
+            --link-color: #dc3545; /* Đỏ khẩn cấp */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: var(--primary-pastel);
+            color: var(--secondary-dark);
+            padding: 20px 5%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .logout-btn {
+            background-color: var(--secondary-dark);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .welcome-msg {
+            padding: 20px 5%;
+            font-size: 1.2em;
+            color: var(--secondary-dark);
+            background-color: #fff0f5; /* Hồng nhạt hơn */
+        }
+        .dashboard-grid {
+            padding: 30px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: var(--primary-pastel);
+            border-bottom: 2px solid var(--primary-pastel);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .card a {
+            display: block;
+            margin-top: 15px;
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .emergency-card {
+            background-color: var(--link-color);
+            color: white;
+            text-align: center;
+            grid-column: 1 / -1; /* Chiếm toàn bộ chiều rộng */
+        }
+        .emergency-card h3 {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+        .emergency-card p {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        .emergency-card a {
+            color: yellow;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>VNU HEALTH - DASHBOARD</h1>
+        <button class="logout-btn" onclick="logout()">Đăng Xuất</button>
+    </div>
+
+    <div class="welcome-msg">
+        Chào mừng, Bệnh nhân <span id="displayPatientID">SV000</span>.
+    </div>
+
+    <div class="dashboard-grid">
+        
+        <div class="card">
+            <h3>📝 Quản lý Hồ sơ</h3>
+            <p>Truy cập, xem hoặc tạo hồ sơ bệnh án mới của bạn.</p>
+            <a href="record.html">▶️ Đi đến Hồ sơ</a>
+        </div>
+        
+        <div class="card">
+            <h3>🧠 Tư vấn Tâm lý</h3>
+            <p>Đặt lịch gặp bác sĩ chuyên khoa để tư vấn sức khỏe tinh thần và stress học tập.</p>
+            <a href="#">▶️ Đặt lịch ngay</a>
+        </div>
+        
+        <div class="card">
+            <h3>🆘 Sơ Cứu Nhanh</h3>
+            <p>Các bước xử lý tức thời cho các tình huống khẩn cấp (gãy xương, ngất xỉu).</p>
+            <a href="sơ_cứu_khẩn_cấp.html">▶️ Xem Hướng dẫn</a>
+        </div>
+        
+        <div class="card emergency-card">
+            <h3>🚨 CẤP CỨU KHẨN CẤP TẠI HÒA LẠC</h3>
+            <p>024 3578 9000</p>
+            <a href="tel:02435789000">GỌI NGAY</a>
+        </div>
+
+    </div>
+
+    <script>
+        // Lấy Mã Bệnh nhân từ Local Storage sau khi đăng nhập thành công
+        const patientID = localStorage.getItem('patientID');
+        if (patientID) {
+            document.getElementById('displayPatientID').textContent = patientID;
+        } else {
+            // Nếu không có ID, quay về trang đăng nhập
+            window.location.href = 'login.html'; 
+        }
+
+        function logout() {
+            localStorage.removeItem('patientID');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
