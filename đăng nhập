@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - VNU Health Record</title>
+    <style>
+        :root {
+            --primary-pastel: #ffc0cb; /* Hồng Pastel */
+            --secondary-dark: #8b0000; /* Đỏ đô/Đỏ đậm */
+            --text-color: #333;
+            --bg-light: #f4f4f9;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: var(--secondary-dark);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        .login-button {
+            background-color: var(--primary-pastel);
+            color: var(--secondary-dark);
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .login-button:hover {
+            background-color: #ffb4c3; 
+        }
+        #loginMessage {
+            margin-top: 15px;
+            color: var(--secondary-dark);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>ĐĂNG NHẬP HỆ THỐNG Y TẾ VNU</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="maBenNhan">Mã Bệnh Nhân (Mã số SV)</label>
+                <input type="text" id="maBenNhan" required placeholder="Nhập mã sinh viên">
+            </div>
+            <div class="form-group">
+                <label for="matKhau">Mật Khẩu</label>
+                <input type="password" id="matKhau" required placeholder="Nhập mật khẩu">
+            </div>
+            <button type="submit" class="login-button">Đăng Nhập</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const maBenNhan = document.getElementById('maBenNhan').value.trim();
+            const matKhau = document.getElementById('matKhau').value.trim();
+            const messageElement = document.getElementById('loginMessage');
+
+            if (maBenNhan && matKhau) {
+                messageElement.textContent = 'Đăng nhập thành công! Đang chuyển hướng...';
+                // Lưu Mã SV giả lập để hiển thị trên Dashboard
+                localStorage.setItem('patientID', maBenNhan);
+                
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html'; 
+                }, 1000); 
+            } else {
+                messageElement.textContent = 'Vui lòng nhập đầy đủ thông tin.';
+            }
+        });
+    </script>
+</body>
+</html>
