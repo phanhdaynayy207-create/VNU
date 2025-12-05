@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ Cứu Khẩn Cấp VNU - 5 Tình Huống Cần Thời Gian Vàng</title>
+    <style>
+        /* CSS nhúng */
+        :root {
+            --primary-color: #007bff; /* Xanh dương (Blue) */
+            --secondary-color: #28a745; /* Xanh lá (Green - Safety) */
+            --warning-color: #dc3545; /* Đỏ (Urgent) */
+            --bg-light: #f8f9fa;
+            --text-dark: #343a40;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .header {
+            background-color: var(--warning-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0 0 5px 0;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        .guide-item {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .guide-item h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .guide-item ol {
+            padding-left: 20px;
+        }
+        .hotline {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff3cd; /* Vàng nhạt */
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .hotline a {
+            font-size: 1.6em;
+            color: var(--warning-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>PHÒNG Y TẾ KHẨN CẤP VNU</h1>
+        <p>GỌI NGAY TRONG THỜI GIAN VÀNG (DƯỚI 5 PHÚT)</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="hotline">
+            HOTLINE CẤP CỨU 24/7: <a href="tel:02435789000">024 3578 9000</a>
+        </div>
+
+        <div class="guide-item">
+            <h2>1. Xử lý Chấn thương Gãy xương/Bong gân</h2>
+            <ol>
+                <li>Giữ bệnh nhân ở tư thế thoải mái nhất, không di chuyển chi bị thương.</li>
+                <li>Dùng nẹp cứng (thanh gỗ, bìa cứng) cố định xương/khớp bị thương, bao gồm khớp trên và dưới vị trí chấn thương.</li>
+                <li>Chườm lạnh (nếu có) để giảm sưng, không chườm trực tiếp lên da.</li>
+                <li>Gọi cấp cứu ngay lập tức.</li>
+            </ol>
+        </div>
+
+        <div class="guide-item">
+            <h2>2. Sơ cứu Ngất/Hôn mê (Không thở)</h2>
+            <ol>
+                <li>Kiểm tra đường thở: Loại bỏ dị vật trong miệng.</li>
+                <li>Nếu không thở, thực hiện **Hồi sinh tim phổi (CPR)** ngay lập tức.</li>
+                <li>Nếu thở, đặt bệnh nhân nằm nghiêng về một bên (tư thế hồi phục) để tránh bị sặc.</li>
+                <li>Gọi cấp cứu 115 và thông báo địa chỉ cụ thể.</li>
+            </ol>
+        </div>
+
+        <div class="guide-item">
+            <h2>3. Xử lý Vết thương Chảy máu Lớn</h2>
+            <ol>
+                <li>Dùng vật liệu sạch (gạc, vải) ấn mạnh và trực tiếp lên vết thương.</li>
+                <li>Nâng cao chi bị thương (nếu có thể) lên cao hơn tim.</li>
+                <li>Băng ép chặt lại để cầm máu, nhưng không quá chặt làm mất cảm giác.</li>
+                <li>Nếu máu thấm qua băng, không gỡ bỏ mà đè thêm lớp băng khác lên.</li>
+            </ol>
+        </div>
+
+        <div class="guide-item">
+            <h2>4. Hỗ trợ Ngộ độc Thực phẩm Cấp tính</h2>
+            <ol>
+                <li>Giữ bình tĩnh, không cố gắng gây nôn trừ khi được bác sĩ hướng dẫn.</li>
+                <li>Cho bệnh nhân uống nước lọc hoặc oresol (nếu có) để bù nước.</li>
+                <li>Nếu bệnh nhân bất tỉnh, đặt nằm nghiêng.</li>
+                <li>Đưa bệnh nhân đến phòng y tế gần nhất hoặc gọi cấp cứu kèm theo mẫu thức ăn (nếu còn).</li>
+            </ol>
+        </div>
+
+        <div class="guide-item">
+            <h2>5. Ứng phó Sốc phản vệ (Dị ứng nghiêm trọng)</h2>
+            <ol>
+                <li>Gọi cấp cứu ngay lập tức và nói rõ là "Sốc phản vệ".</li>
+                <li>Nếu bệnh nhân có sẵn bút tiêm Adrenaline (Epipen), giúp họ sử dụng.</li>
+                <li>Đặt bệnh nhân nằm ngửa, kê chân cao hơn đầu.</li>
+                <li>Không cho ăn hoặc uống bất cứ thứ gì. Theo dõi đường thở và mạch đập.</li>
+            </ol>
+        </div>
+
+    </div>
+</body>
+</html>
